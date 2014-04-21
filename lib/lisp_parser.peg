@@ -1,21 +1,5 @@
 grammar Lisp
 
-  program   <- cell* <Program>
-
-  cell      <- space* datum space* <Cell>
-
-  datum     <- list / integer / boolean / symbol
-
-  list      <- "(" items:cell* ")" <List>
-
-  integer   <- ("0" / [1-9] [0-9]*) <Integer>
-
-  boolean   <- ("#t" / "#f") <Boolean>
-
-  symbol    <- (!delimiter .)+ <Symbol>
-
-  delimiter <- paren / space
-
   paren     <- "(" / ")"
 
   space     <- [\s\n\r\t]
