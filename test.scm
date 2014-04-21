@@ -1,7 +1,7 @@
-(define add (lambda (x)
-              (lambda (y)
-                (+ x y))))
+(define fact (lambda (x)
+               (if (= x 0)
+                   1
+                   (* (fact (- x 1))
+                      x))))
 
-(define add3 (add 3))
-
-(add3 7)
+(fact 6)
