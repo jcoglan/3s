@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+var lisp = require('../lib/lisp'),
+    fs   = require('fs');
+
+var pathname = process.argv[2];
+
+console.log(lisp.run(pathname));
